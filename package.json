@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "@napi-rs/canvas": "^1.0.1",
+    "discord.js": "^14.26.4",
+    "dotenv": "^17.4.2"
+  },
+  "name": "discord-widget-builder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
