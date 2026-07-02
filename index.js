@@ -1068,7 +1068,7 @@ client.on(Events.InteractionCreate, async interaction => {
             await interaction.deferUpdate();
 
             const isNext = interaction.customId.startsWith("gal_next_");
-            const currentIndex = parseInt(interaction.customId.replace(isNext ? "gal_next_" : "gal_prev_', '"), 10);
+            const currentIndex = parseInt(interaction.customId.replace(isNext ? "gal_next_" : "gal_prev_", ""), 10);
             const newIndex = isNext ? currentIndex + 1 : currentIndex - 1;
 
             await renderGalleryPage(interaction, newIndex);
