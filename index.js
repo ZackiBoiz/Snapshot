@@ -1029,7 +1029,7 @@ client.on(Events.InteractionCreate, async interaction => {
     if (interaction.isStringSelectMenu() && interaction.customId.startsWith("wb_snapshot_select_category_")) {
         await interaction.deferUpdate();
 
-        const snapshotId = interaction.customId.replace("wb_snapshot_select_category_', '");
+        const snapshotId = interaction.customId.replace("wb_snapshot_select_category_", "");
         const snapshotDb = readSnapshotDatabase();
         const snapshot = snapshotDb[snapshotId];
 
@@ -1100,7 +1100,7 @@ client.on(Events.InteractionCreate, async interaction => {
             }
 
             const isNext = interaction.customId.startsWith("search_next_");
-            const currentIndex = parseInt(interaction.customId.replace(isNext ? "search_next_" : "search_prev_', '"), 10);
+            const currentIndex = parseInt(interaction.customId.replace(isNext ? "search_next_" : "search_prev_", ""), 10);
             const newIndex = isNext ? currentIndex + 1 : currentIndex - 1;
 
             await renderSearchPage(interaction, cache.query, cache.userFilterId, newIndex, true);
@@ -1236,7 +1236,7 @@ client.on(Events.InteractionCreate, async interaction => {
 
         if (interaction.customId.startsWith("wb_snapshot_confirm_")) {
             await interaction.deferUpdate();
-            const targetSnapshotId = interaction.customId.replace("wb_snapshot_confirm_', '");
+            const targetSnapshotId = interaction.customId.replace("wb_snapshot_confirm_", "");
             const snapshotDb = readSnapshotDatabase();
             const snapshot = snapshotDb[targetSnapshotId];
 
@@ -1353,7 +1353,7 @@ client.on(Events.InteractionCreate, async interaction => {
         }
 
         if (interaction.customId.startsWith("wb_btn_edit_")) {
-            const category = interaction.customId.replace("wb_btn_edit_', '");
+            const category = interaction.customId.replace("wb_btn_edit_", "");
             const modal = new ModalBuilder().setCustomId(`modal_${category}`).setTitle("Edit Properties");
             const data = db[userId].widget;
 
@@ -1405,7 +1405,7 @@ client.on(Events.InteractionCreate, async interaction => {
         await interaction.deferUpdate();
         initUserData();
 
-        const category = interaction.customId.replace("modal_', '");
+        const category = interaction.customId.replace("modal_", "");
 
         if (category === "cat_top_p1") {
             db[userId].widget.topTitle = interaction.fields.getTextInputValue("topTitle");
