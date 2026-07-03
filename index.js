@@ -1359,41 +1359,41 @@ client.on(Events.InteractionCreate, async interaction => {
 
             if (category === "cat_top_p1") {
                 modal.addComponents(
-                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("topTitle").setLabel("Title').setValue(data.topTitle || '").setStyle(TextInputStyle.Short)),
-                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("topImage").setLabel("Banner Asset URL').setValue(data.topImage || '").setStyle(TextInputStyle.Short).setRequired(false)),
-                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("topSub1").setLabel("Subtitle 1').setValue(data.topSub1 || '").setStyle(TextInputStyle.Short).setRequired(false)),
-                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("topSub1Icon").setLabel("Subtitle 1 Icon URL').setValue(data.topSub1Icon || '").setStyle(TextInputStyle.Short).setRequired(false))
+                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("topTitle").setLabel("Title").setValue(data.topTitle || "").setStyle(TextInputStyle.Short)),
+                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("topImage").setLabel("Banner Asset URL").setValue(data.topImage || "").setStyle(TextInputStyle.Short).setRequired(false)),
+                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("topSub1").setLabel("Subtitle 1").setValue(data.topSub1 || "").setStyle(TextInputStyle.Short).setRequired(false)),
+                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("topSub1Icon").setLabel("Subtitle 1 Icon URL").setValue(data.topSub1Icon || "").setStyle(TextInputStyle.Short).setRequired(false))
                 );
             } else if (category === "cat_top_p2") {
                 modal.addComponents(
-                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("topSub2").setLabel("Subtitle 2').setValue(data.topSub2 || '").setStyle(TextInputStyle.Short).setRequired(false)),
-                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("topSub2Icon").setLabel("Subtitle 2 Icon URL').setValue(data.topSub2Icon || '").setStyle(TextInputStyle.Short).setRequired(false)),
-                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("topSub3").setLabel("Subtitle 3').setValue(data.topSub3 || '").setStyle(TextInputStyle.Short).setRequired(false)),
-                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("topSub3Icon").setLabel("Subtitle 3 Icon URL').setValue(data.topSub3Icon || '").setStyle(TextInputStyle.Short).setRequired(false))
+                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("topSub2").setLabel("Subtitle 2").setValue(data.topSub2 || "").setStyle(TextInputStyle.Short).setRequired(false)),
+                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("topSub2Icon").setLabel("Subtitle 2 Icon URL").setValue(data.topSub2Icon || "").setStyle(TextInputStyle.Short).setRequired(false)),
+                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("topSub3").setLabel("Subtitle 3").setValue(data.topSub3 || "").setStyle(TextInputStyle.Short).setRequired(false)),
+                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("topSub3Icon").setLabel("Subtitle 3 Icon URL").setValue(data.topSub3Icon || "").setStyle(TextInputStyle.Short).setRequired(false))
                 );
             } else if (category === "cat_bottom") {
                 modal.addComponents(
-                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("bottomTitle").setLabel("Title').setValue(data.bottomTitle || '").setStyle(TextInputStyle.Short)),
-                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("bottomDescription").setLabel("Description').setValue(data.bottomDescription || '").setStyle(TextInputStyle.Short).setRequired(false)),
+                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("bottomTitle").setLabel("Title").setValue(data.bottomTitle || "").setStyle(TextInputStyle.Short)),
+                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("bottomDescription").setLabel("Description").setValue(data.bottomDescription || "").setStyle(TextInputStyle.Short).setRequired(false)),
                     new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("bottomProgress").setLabel("Progress Percentage (0-100)").setValue(String(data.bottomProgress)).setStyle(TextInputStyle.Short)),
-                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("bottomImage").setLabel("Image Icon URL').setValue(data.bottomImage || '").setStyle(TextInputStyle.Short).setRequired(false))
+                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("bottomImage").setLabel("Image Icon URL").setValue(data.bottomImage || "").setStyle(TextInputStyle.Short).setRequired(false))
                 );
             } else if (category === "cat_preview") {
                 modal.addComponents(
-                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("previewThumbnail").setLabel("Image Thumbnail URL').setValue(data.previewThumbnail || '").setStyle(TextInputStyle.Short).setRequired(false))
+                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("previewThumbnail").setLabel("Image Thumbnail URL").setValue(data.previewThumbnail || "").setStyle(TextInputStyle.Short).setRequired(false))
                 );
             } else if (category === "cat_mini") {
                 modal.addComponents(
-                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("miniLabel").setLabel("Label').setValue(data.miniLabel || '").setStyle(TextInputStyle.Short)),
-                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("miniThumbnail").setLabel("Image Thumbnail URL').setValue(data.miniThumbnail || '").setStyle(TextInputStyle.Short).setRequired(false)),
-                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("miniDescription").setLabel("Description').setValue(data.miniDescription || '").setStyle(TextInputStyle.Short)),
-                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("miniIcon").setLabel("Image Icon URL').setValue(data.miniIcon || '").setStyle(TextInputStyle.Short).setRequired(false))
+                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("miniLabel").setLabel("Label").setValue(data.miniLabel || "").setStyle(TextInputStyle.Short)),
+                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("miniThumbnail").setLabel("Image Thumbnail URL").setValue(data.miniThumbnail || "").setStyle(TextInputStyle.Short).setRequired(false)),
+                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("miniDescription").setLabel("Description").setValue(data.miniDescription || "").setStyle(TextInputStyle.Short)),
+                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("miniIcon").setLabel("Image Icon URL").setValue(data.miniIcon || "").setStyle(TextInputStyle.Short).setRequired(false))
                 );
             } else if (category === "cat_activity") {
                 modal.addComponents(
-                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("activityLabel").setLabel("Label').setValue(data.activityLabel || '").setStyle(TextInputStyle.Short)),
-                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("activityDescription").setLabel("Description').setValue(data.activityDescription || '").setStyle(TextInputStyle.Short).setRequired(false)),
-                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("activityIcon").setLabel("Image Icon URL').setValue(data.activityIcon || '").setStyle(TextInputStyle.Short).setRequired(false)),
+                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("activityLabel").setLabel("Label").setValue(data.activityLabel || "").setStyle(TextInputStyle.Short)),
+                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("activityDescription").setLabel("Description").setValue(data.activityDescription || "").setStyle(TextInputStyle.Short).setRequired(false)),
+                    new ActionRowBuilder().addComponents(new TextInputBuilder().setCustomId("activityIcon").setLabel("Image Icon URL").setValue(data.activityIcon || "").setStyle(TextInputStyle.Short).setRequired(false)),
                 );
             }
 
